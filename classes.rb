@@ -5,9 +5,14 @@ class Spaceship
         @destination = destination
         # go towards destination
     end
+    # instance vars are not public outside method but instance methods are. It is like a getter for the destination value.
     def destination
         @destination
     end
+end
+
+class Tank
+    attr_accessor :destination
 end
 
 puts Spaceship
@@ -29,3 +34,7 @@ ship.launch("Mars")
 p ship
 
 puts ship.destination
+
+tank = Tank.new
+tank.destination = "Earth"
+puts tank.destination
