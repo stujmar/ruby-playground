@@ -1,6 +1,13 @@
 # self or current context
 
 class Spaceship
+    def launch(destination)
+        @destination = destination
+        # go towards destination
+    end
+    def destination
+        @destination
+    end
 end
 
 puts Spaceship
@@ -16,3 +23,9 @@ d = c.clone
 c.downcase!
 puts c
 puts d
+
+ship = Spaceship.new
+ship.launch("Mars")
+p ship
+
+puts ship.destination
