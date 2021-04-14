@@ -1,5 +1,5 @@
 class Probe
-    def deploy
+    def deploy(deploy_time, return_time)
         puts "probe deployed"
     end
     def take_sample
@@ -14,9 +14,9 @@ class MineralProbe < Probe
 end
 
 class AtmosphericProbe < Probe
-    def deploy
+    def deploy(deploy_time)
         puts "warming up"
-        super # returns what the super method returns
+        super(deploy_time, 10) # returns what the super method returns
     end
     def take_sample
         puts "take atmospheric sample"
@@ -24,5 +24,5 @@ class AtmosphericProbe < Probe
 end
 
 Addy = AtmosphericProbe.new
-Addy.deploy
+Addy.deploy(10)
 Addy.take_sample
