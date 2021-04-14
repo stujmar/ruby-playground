@@ -24,7 +24,7 @@ class Tree
         self.age = self.age + 1;
     end
 end
-
+  
 spruce = Tree.new
 spruce.name = "Billy the Spruce"
 puts spruce.name
@@ -33,7 +33,6 @@ spruce.age = 0
 puts "The age of the tree is #{spruce.age}"
 spruce.grow()
 puts "The age of the tree is #{spruce.age}"
-
 
 puts Spaceship
 
@@ -51,10 +50,23 @@ puts d
 
 ship = Spaceship.new
 ship.launch("Mars")
-p ship
+puts ship
 
 puts ship.destination
 
 tank = Tank.new
 tank.destination = "Earth"
 puts tank.destination
+
+class Cat
+    attr_accessor :name, :age, :leg_count
+
+    def initialize(name, age, leg_count=4)
+        @name = name
+        @age = age
+        @leg_count = leg_count        
+    end
+end
+
+kitty = Cat.new("Shopcat", 7)
+puts kitty.leg_count
