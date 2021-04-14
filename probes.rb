@@ -26,3 +26,11 @@ end
 Addy = AtmosphericProbe.new
 Addy.deploy(10)
 Addy.take_sample
+
+class Spaceship
+    def self.thruster_count
+        "the ship's thruster count is 2"
+    end
+end
+
+puts Spaceship.thruster_count
