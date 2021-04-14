@@ -28,8 +28,9 @@ Addy.deploy(10)
 Addy.take_sample
 
 class Spaceship
-    def self.thruster_count
-        "the ship's thruster count is 2"
+    @@thruster_count = 2
+    def self.thruster_count # self. makes this a class method.
+        "the ship's thruster count is #{@@thruster_count}"
     end
 end
 
