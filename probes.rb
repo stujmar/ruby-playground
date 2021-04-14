@@ -14,6 +14,10 @@ class MineralProbe < Probe
 end
 
 class AtmosphericProbe < Probe
+    def deploy
+        puts "warming up"
+        super # returns what the super method returns
+    end
     def take_sample
         puts "take atmospheric sample"
     end
