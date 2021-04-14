@@ -16,14 +16,23 @@ class Tank
 end
 
 class Tree
-    attr_accessor :location
+    attr_accessor :location, :type, :age
     attr_reader :name
     attr_writer :name
+
+    def grow()
+        self.age = self.age + 1;
+    end
 end
 
 spruce = Tree.new
 spruce.name = "Billy the Spruce"
 puts spruce.name
+
+spruce.age = 0
+puts "The age of the tree is #{spruce.age}"
+spruce.grow()
+puts "The age of the tree is #{spruce.age}"
 
 
 puts Spaceship
