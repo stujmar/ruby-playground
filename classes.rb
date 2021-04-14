@@ -15,6 +15,17 @@ class Tank
     attr_accessor :destination
 end
 
+class Tree
+    attr_accessor :location
+    attr_reader :name
+    attr_writer :name
+end
+
+spruce = Tree.new
+spruce.name = "Billy the Spruce"
+puts spruce.name
+
+
 puts Spaceship
 
 a = "abc"
