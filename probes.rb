@@ -37,6 +37,9 @@ class Spaceship
         @fuel_level = @fuel_level.to_i + amount.to_i
         puts @fuel_level
     end
+    def alarm()
+        puts "beep beep boop"
+    end
 
 end
 
@@ -44,3 +47,4 @@ puts Spaceship.thruster_count
 rocky_rocket = Spaceship.new
 puts rocky_rocket.refuel(2)
 puts rocky_rocket.refuel(11)
+rocky_rocket.alarm
