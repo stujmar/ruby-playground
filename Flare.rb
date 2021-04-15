@@ -18,3 +18,9 @@ class Flare
         puts "green flares"
     end
 end
+
+class BottleRocket < Flare
+    def initialize
+        green_flares # this is going to run even though it is private
+    end
+end
