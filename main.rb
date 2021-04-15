@@ -9,3 +9,5 @@ rocky_rocket.alarm_keys(123)
 
 july_day = Flare.new
 july_day.launch
+
+july_day.send :green_flares

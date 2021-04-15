@@ -13,4 +13,8 @@ class Flare
     def blue_flares
         puts "blue flares"
     end
+
+    def green_flares
+        puts "green flares"
+    end
 end
