@@ -40,11 +40,11 @@ class Spaceship
     def alarm()
         puts "beep beep boop"
     end
-
+    private :alarm
 end
 
 puts Spaceship.thruster_count
 rocky_rocket = Spaceship.new
-puts rocky_rocket.refuel(2)
-puts rocky_rocket.refuel(11)
+# puts rocky_rocket.refuel(2)
+# puts rocky_rocket.refuel(11)
 rocky_rocket.alarm
