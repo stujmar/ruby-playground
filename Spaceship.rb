@@ -17,9 +17,10 @@ class Spaceship
         puts @fuel_level
     end
 
-    # def matches(other)
-    #     call_sign == other.call_sign
-    # end
+    def matches?(other)
+        call_sign == other.call_sign
+    end
+
     def alarm()
         puts "beep beep boop"
     end
@@ -35,6 +36,9 @@ class Spaceship
 end
 
 class Cruiser < Spaceship
+
+    attr_accessor :call_sign
+
     def initialize
         @call_sign = "Cruisin' USA"
     end
@@ -44,4 +48,6 @@ shippy = Spaceship.new
 cruisy = Cruiser.new
 
 puts [shippy, cruisy]
-puts "hi"
+puts shippy.matches?(cruisy)
+cruisy.call_sign = "shipity-do-da"
+puts shippy.matches?(cruisy)
