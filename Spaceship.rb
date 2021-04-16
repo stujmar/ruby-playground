@@ -22,5 +22,7 @@ class Spaceship
 end
 
 class Cruiser < Spaceship
-
+    def initialize
+        @call_sign
+    end
 def
