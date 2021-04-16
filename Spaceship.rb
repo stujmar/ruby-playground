@@ -10,9 +10,14 @@ class Spaceship
         "the ship's thruster count is #{@@thruster_count}"
     end
     def refuel(amount)
-        @fuel_level = @fuel_level.to_i + amount.to_i
+        @fuel_level = @fuel_level.to_i + amount.to_i #this isn't working
         puts @fuel_level
     end
+
+    def matches(other)
+        call_sign == other.call_sign
+    end
+
     def alarm()
         puts "beep beep boop"
     end
