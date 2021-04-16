@@ -1,6 +1,11 @@
 class Spaceship
+    attr_reader :call_sign # this is a getter for call sign
+    protected :call_sign # make the call sign private
     @@thruster_count = 2
     @fuel_level = 5
+    def initialize
+        @call_sign
+    end
     def self.thruster_count # self. makes this a class method.
         "the ship's thruster count is #{@@thruster_count}"
     end
