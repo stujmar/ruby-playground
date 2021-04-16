@@ -17,9 +17,13 @@ class Sibling
     def initialize(name)
         @name = name
     end
+
+    def ==(other)
+        name == other.name
+    end
 end
 
-# different instances same name is false
+# different instances same name is false,
 sibling1 = Sibling.new("Stu")
 sibling2 = Sibling.new("Stu")
 
@@ -28,3 +32,6 @@ puts sibling1.equal?(sibling2)
 
 puts "comparing names"
 puts sibling1.name == sibling2.name
+
+puts "comparing objects with overwritten == operator"
+puts sibling1 == sibling2
