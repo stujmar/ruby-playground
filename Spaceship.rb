@@ -20,3 +20,7 @@ class Spaceship
         end
     end
 end
+
+class Cruiser < Spaceship
+
+def
