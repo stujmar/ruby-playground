@@ -26,10 +26,16 @@ class Car < Vehicle
         puts "beep beep"
     end
 
+end
 
+class Car 
+    def park
+        puts "parking"
+    end
 end
 
 tesla = Car.new
 
 tesla.drive
+tesla.park
 Car.honk
