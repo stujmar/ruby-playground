@@ -18,5 +18,6 @@ class Cat
 end
 
 kitty ||= Cat.new("kitty")
+kitty ||= Cat.new("Carty") # doesn't execuse.
 
 puts kitty.name
