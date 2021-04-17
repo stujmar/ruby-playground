@@ -20,5 +20,12 @@ begin
     if count_down == 0
         puts "Happy New Year!"
     end
-end while count_down >= 1
+end while count_down >= 1 # repeat if this is true, so you get one last run through before it hits this with the end values.
 
+for i in [3, 2, 1]
+    puts i
+end
+
+for i in (1..10) # two dots incules the last number in the range
+    puts i
+end
