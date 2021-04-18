@@ -13,5 +13,15 @@ def my_method
 end
 my_method { "hello" } # hello is a block passed to the method but ignored?
 
+# Yield keyword
+def this_method
+    puts "top"
+    yield
+    puts "bottom"
+end
 
+this_method do
+    puts "yield"
+end
 
+# almost like a callback function.
