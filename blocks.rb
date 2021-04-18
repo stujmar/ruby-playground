@@ -25,3 +25,13 @@ this_method do
 end
 
 # almost like a callback function.
+
+def process_with_checkin
+    puts "Put the dough in the oven."
+    yield("Steve")
+    puts "The bread is done!"
+end
+
+process_with_checkin do |name|
+    puts "#{name} takes a peek"
+end
