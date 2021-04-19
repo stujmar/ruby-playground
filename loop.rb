@@ -37,11 +37,20 @@ message = {
     "active" => true
 }
 
-while message["text"] = "hello"
-    puts "about to check next"
-    next if message["active"] == true
-    puts "one loop"
-end
+# This runs forever.
+# while message["text"] = "hello"
+#     puts "about to check next"
+#     next if message["active"] == true
+#     puts "one loop"
+# end
 
 puts message["text"]
 puts message["active"]
+
+# until loop with a break
+counter = 0
+until counter == 10
+    puts "No break yet at #{counter}"
+    counter = counter + 1
+    break if counter == 5
+end
