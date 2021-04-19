@@ -49,3 +49,7 @@ rescue RuntimeError => e
     end
 end
 
+# safty keyword but is a blanket solution 
+# better to write calls that have exception handling build in.
+batten_hatches rescue false
+
