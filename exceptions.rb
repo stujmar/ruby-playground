@@ -53,3 +53,5 @@ end
 # better to write calls that have exception handling build in.
 batten_hatches rescue false
 
+# throw catch are a different flow control mechanism in Ruby then in other languages.
+# very confusing. spaghetti code.
