@@ -1,3 +1,5 @@
+# this module will not run it is pseudocode
+
 def launch
     begin
         batten_hatches
@@ -19,5 +21,12 @@ rescue LightError
 rescue StandardError => e # let's check what kind of exception it was
     puts e.message
     false
+end
+
+# raise and rescue keywords.
+
+rescue HatchError => err
+    puts $!.message # maybe look this up.
+    raise
 end
 
