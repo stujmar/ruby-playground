@@ -29,3 +29,16 @@ end
 for i in (1..10) # two dots incules the last number in the range
     puts i
 end
+
+# break next and redo for flow control in loops
+
+message = {
+    "text" => "hello",
+    "active" => true
+}
+
+# while message.text = "hello"
+#     next if message
+
+puts message["text"]
+puts message["active"]
