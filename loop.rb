@@ -37,8 +37,11 @@ message = {
     "active" => true
 }
 
-# while message.text = "hello"
-#     next if message
+while message["text"] = "hello"
+    puts "about to check next"
+    next if message["active"] == true
+    puts "one loop"
+end
 
 puts message["text"]
 puts message["active"]
