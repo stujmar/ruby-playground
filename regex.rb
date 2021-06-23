@@ -59,3 +59,22 @@ puts /.\w./.match('bob')
 # /\W/ or /^\w/ a non word character?
 puts /[a-z][^\w\s][a-zA-Z]/.match('Hello b😌b! this string could be an entire novel')
 
+# /\d/ matches any digit [0-9]
+puts /\d/.match('h3llo world') 
+
+# /\D/ matches any non digit [^0-9]
+puts /\D/.match('1234S6789')
+
+# /\h/ matches any hexdigit character [0-9a-fA-F]
+puts /\h/.match('xzyFXZY')
+
+# /\H/ matches any non-hexdigit character [^0-9a-fA-F]
+puts /\H/.match('123y123')
+
+# /\s/ matches any whitespace character [ \t\r\n\f\v]
+puts /.\s./.match('pool lobes')
+
+# /\S/ matches any non-whitespace character [^ \t\r\n\f\v]
+puts /.\S/.match('   fo  ') #=> " f"
+
+# POSIX bracket expressions 
