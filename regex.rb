@@ -47,16 +47,18 @@ puts /[^a-g]oose/.match('goose choose')
 # && can be used to check two ranges
 puts /b[a-c&&[^x-z]]e/.match('hr is bae')
 
+# The following metacharacter are short had for character classes
+
 # . is any character except a newline.
 puts /b.b/.match('b&b')
 
 # m is for multiline mode
 puts /b.b/m.match('pop \n b!b')
 
-# /\w/ a word character?
+# /\w/ a word (alphanumeric) character?
 puts /.\w./.match('bob')
 
-# /\W/ or /^\w/ a non word character?
+# /\W/ or /^\w/ a non word character? Emojis and stuff.
 puts /[a-z][^\w\s][a-zA-Z]/.match('Hello b😌b! this string could be an entire novel')
 
 # /\d/ matches any digit [0-9]
@@ -78,3 +80,38 @@ puts /.\s./.match('pool lobes')
 puts /.\S/.match('   fo  ') #=> " f"
 
 # POSIX bracket expressions 
+# Similar to character classes only they encompass non ASCII characters/
+
+# [[:alnum:]] any alphanumeric char
+puts /[[:alnum:]]/.match('😌😌😌o😌😌😌') #=> 'o'
+
+# [[:alpha:]] matches any alphabetical character
+puts /[[:alpha:]]/.match('1234S4321') #=> 'S'
+
+# [[:blank:]] any space or tab
+puts /.[[:blank:]]./.match('pop pop') #=> "p p"
+
+# [[:cntrl:]] matches any control character? pass.
+
+# [[:digit:]] matches any digit
+puts /[[:digit:]]/.match('abcd3fG') #=> '3'
+
+# [[:graph:]] any non space character
+puts /[[:graph:]]/.match('   H   ') #=> 'H'
+
+# [[:upper:]] any uppercase alphabetical character
+puts /[[:upper:]]/.match('abcdEfgh') #=> 'E'
+
+# [[:lower:]] any lower case character
+puts /[[:lower:]]/.match('ABCDeFG') #=> 'e'
+
+# [[:print:]] like [[:graph:]] only includes space. pass
+
+# [[:punct:]] looks for punctuation.
+puts /[[:punct:]]/.match('peel.apple') #=> '.'
+
+# [[:space:]] any white space tab or newline.
+puts /.[[:space:]]./.match('hat tan') #=> 't t'
+
+# [[:xdigit:]] any hexcode character [0-9a-fA-F]
+puts /[[:xdigit:]]/.match('timatom') #=> 'a'
