@@ -115,3 +115,10 @@ puts /.[[:space:]]./.match('hat tan') #=> 't t'
 
 # [[:xdigit:]] any hexcode character [0-9a-fA-F]
 puts /[[:xdigit:]]/.match('timatom') #=> 'a'
+
+# Repetition
+
+# Zero or more times
+puts /ba*b/.match('bb')
+puts /ba*b/.match('bab')
+puts /ba*b/.match('baab') #=> all match
