@@ -147,3 +147,9 @@ puts "\nm or less times"
 puts "/ba{,2}b/ =~ bab: #{/ba{,2}b/.match('bab')}" #=> match!
 puts "/ba{,2}b/ =~ baab: #{/ba{,2}b/.match('baab')}" #=> match!
 puts "/ba{,2}b/ =~ baaab: #{/ba{,2}b/.match('baaab')}" #=> no match
+
+puts "\nRange n to m times"
+puts "/ba{2,3}b/ =~ bab: #{/ba{2,3}b/.match('bab')}" #=> no match
+puts "/ba{2,3}b/ =~ baab: #{/ba{2,3}b/.match('baab')}" #=> match!
+puts "/ba{2,3}b/ =~ baaab: #{/ba{2,3}b/.match('baaab')}" #=> match!
+puts "/ba{2,3}b/ =~ baaaab: #{/ba{2,3}b/.match('baaaab')}" #=> no match
