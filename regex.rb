@@ -132,3 +132,8 @@ puts /ba+b/.match('baab') #=> match
 puts "/ba?b/ =~ bb: #{/ba?b/.match('bb')}" #=> match
 puts "/ba?b/ =~ bab: #{/ba?b/.match('bab')}" #=> match
 puts "/ba?b/ =~ baab: #{/ba?b/.match('baab')}" #=> no match!
+
+# Exactly n times
+puts "/ba{3}b/ =~ bab: #{/ba{3}b/.match('bab')}" #=> no match
+puts "/ba{3}b/ =~ baab: #{/ba{3}b/.match('baab')}" #=> no match
+puts "/ba{3}b/ =~ baaab: #{/ba{3}b/.match('baaab')}" #=> no match
