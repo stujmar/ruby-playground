@@ -144,3 +144,6 @@ puts "/ba{2,}b/ =~ baab: #{/ba{2,}b/.match('baab')}" #=> match!
 puts "/ba{2,}b/ =~ baaab: #{/ba{2,}b/.match('baaab')}" #=> match!
 
 puts "\nm or less times"
+puts "/ba{,2}b/ =~ bab: #{/ba{,2}b/.match('bab')}" #=> match!
+puts "/ba{,2}b/ =~ baab: #{/ba{,2}b/.match('baab')}" #=> match!
+puts "/ba{,2}b/ =~ baaab: #{/ba{,2}b/.match('baaab')}" #=> no match
