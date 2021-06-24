@@ -118,27 +118,29 @@ puts /[[:xdigit:]]/.match('timatom') #=> 'a'
 
 # Repetition
 
-# Zero or more times.
+puts "\nZero or more times."
 puts /ba*b/.match('bb')
 puts /ba*b/.match('bab')
 puts /ba*b/.match('baab') #=> all match
 
-# One or more times.
+puts "\nOne or more times."
 puts /ba+b/.match('bb') #=> no match!
 puts /ba+b/.match('bab') #=> match
 puts /ba+b/.match('baab') #=> match
 
-puts "Zero or One time."
+puts "\nZero or One time."
 puts "/ba?b/ =~ bb: #{/ba?b/.match('bb')}" #=> match
 puts "/ba?b/ =~ bab: #{/ba?b/.match('bab')}" #=> match
 puts "/ba?b/ =~ baab: #{/ba?b/.match('baab')}" #=> no match!
-puts
-puts "Exactly n times"
+
+puts "\nExactly n times"
 puts "/ba{3}b/ =~ bab: #{/ba{3}b/.match('bab')}" #=> no match
 puts "/ba{3}b/ =~ baab: #{/ba{3}b/.match('baab')}" #=> no match
 puts "/ba{3}b/ =~ baaab: #{/ba{3}b/.match('baaab')}" #=> match!
-puts
-puts "n or more times"
+
+puts "\nn or more times"
 puts "/ba{2}b/ =~ bab: #{/ba{2,}b/.match('bab')}" #=> no match
 puts "/ba{2,}b/ =~ baab: #{/ba{2,}b/.match('baab')}" #=> match!
 puts "/ba{2,}b/ =~ baaab: #{/ba{2,}b/.match('baaab')}" #=> match!
+
+puts "\nm or less times"
