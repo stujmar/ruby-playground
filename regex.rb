@@ -118,17 +118,17 @@ puts /[[:xdigit:]]/.match('timatom') #=> 'a'
 
 # Repetition
 
-puts "\nZero or more times."
+puts "\n* Zero or more times."
 puts /ba*b/.match('bb')
 puts /ba*b/.match('bab')
 puts /ba*b/.match('baab') #=> all match
 
-puts "\nOne or more times."
+puts "\n+ One or more times."
 puts /ba+b/.match('bb') #=> no match!
 puts /ba+b/.match('bab') #=> match
 puts /ba+b/.match('baab') #=> match
 
-puts "\nZero or One time."
+puts "\n? Zero or One time."
 puts "/ba?b/ =~ bb: #{/ba?b/.match('bb')}" #=> match
 puts "/ba?b/ =~ bab: #{/ba?b/.match('bab')}" #=> match
 puts "/ba?b/ =~ baab: #{/ba?b/.match('baab')}" #=> no match!
@@ -153,3 +153,8 @@ puts "/ba{2,3}b/ =~ bab: #{/ba{2,3}b/.match('bab')}" #=> no match
 puts "/ba{2,3}b/ =~ baab: #{/ba{2,3}b/.match('baab')}" #=> match!
 puts "/ba{2,3}b/ =~ baaab: #{/ba{2,3}b/.match('baaab')}" #=> match!
 puts "/ba{2,3}b/ =~ baaaab: #{/ba{2,3}b/.match('baaaab')}" #=> no match
+
+
+puts "\nRegex and String can be flip flopped apparently?"
+puts "\"Hello\".match(/[[:upper:]]+[[:lower:]]+l{2}o/)"
+puts "Hello".match(/[[:upper:]]+[[:lower:]]+l{2}o/) #=> #<MatchData "Hello">
