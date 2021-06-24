@@ -118,12 +118,17 @@ puts /[[:xdigit:]]/.match('timatom') #=> 'a'
 
 # Repetition
 
-# Zero or more times
+# Zero or more times.
 puts /ba*b/.match('bb')
 puts /ba*b/.match('bab')
 puts /ba*b/.match('baab') #=> all match
 
-# One or more times
+# One or more times.
 puts /ba+b/.match('bb') #=> no match!
 puts /ba+b/.match('bab') #=> match
 puts /ba+b/.match('baab') #=> match
+
+# Zero or One time.
+puts "/ba?b/ =~ bb: #{/ba?b/.match('bb')}" #=> match
+puts "/ba?b/ =~ bab: #{/ba?b/.match('bab')}" #=> match
+puts "/ba?b/ =~ baab: #{/ba?b/.match('baab')}" #=> no match!
