@@ -122,3 +122,8 @@ puts /[[:xdigit:]]/.match('timatom') #=> 'a'
 puts /ba*b/.match('bb')
 puts /ba*b/.match('bab')
 puts /ba*b/.match('baab') #=> all match
+
+# One or more times
+puts /ba+b/.match('bb') #=> no match!
+puts /ba+b/.match('bab') #=> match
+puts /ba+b/.match('baab') #=> match
