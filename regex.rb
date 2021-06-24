@@ -158,3 +158,8 @@ puts "/ba{2,3}b/ =~ baaaab: #{/ba{2,3}b/.match('baaaab')}" #=> no match
 puts "\nRegex and String can be flip flopped apparently?"
 puts "\"Hello\".match(/[[:upper:]]+[[:lower:]]+l{2}o/)"
 puts "Hello".match(/[[:upper:]]+[[:lower:]]+l{2}o/) #=> #<MatchData "Hello">
+
+puts "\nLazy and Greedy matching determines how many results are returned"
+puts "Greedy by default then a ? can force a lazy result"
+puts "/<.+>/.match(\"<a><b>\"): #{/<.+>/.match("<a><b>")}"
+puts "/<.+?>/.match(\"<a><b>\"): #{/<.+?>/.match("<a><b>")}"
