@@ -163,3 +163,10 @@ puts "\nLazy and Greedy matching determines how many results are returned"
 puts "Greedy by default then a ? can force a lazy result"
 puts "/<.+>/.match(\"<a><b>\"): #{/<.+>/.match("<a><b>")}"
 puts "/<.+?>/.match(\"<a><b>\"): #{/<.+?>/.match("<a><b>")}"
+
+# Redacting phonenumbers
+phone_number = "212-555-1234"
+puts phone_number
+puts phone_number.gsub(/\d{3}-\d{4}/, "XXX-XXXX")
+
+# Capturing and back references
