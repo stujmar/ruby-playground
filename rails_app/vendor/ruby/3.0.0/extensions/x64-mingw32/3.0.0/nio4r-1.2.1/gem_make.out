@@ -1,0 +1,62 @@
+current directory: C:/Users/workbench/code/temp/ruby-playground/rails_app/vendor/ruby/3.0.0/gems/nio4r-1.2.1/ext/nio4r
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20220407-15792-ca9eux.rb extconf.rb
+checking for unistd.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_without_gvl()... yes
+checking for sys/select.h... no
+checking for poll.h... no
+checking for sys/epoll.h... no
+checking for sys/event.h... no
+checking for port.h... no
+checking for sys/resource.h... no
+creating Makefile
+
+current directory: C:/Users/workbench/code/temp/ruby-playground/rails_app/vendor/ruby/3.0.0/gems/nio4r-1.2.1/ext/nio4r
+make "DESTDIR=" clean
+bash.exe: warning: could not find /tmp, please create!
+
+current directory: C:/Users/workbench/code/temp/ruby-playground/rails_app/vendor/ruby/3.0.0/gems/nio4r-1.2.1/ext/nio4r
+make "DESTDIR="
+generating nio4r_ext-x64-mingw32.def
+bash.exe: warning: could not find /tmp, please create!
+compiling monitor.c
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:7:
+../libev/ev.c:1829:31: warning: 'ev_default_loop_ptr' initialized and declared 'extern'
+ 1829 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+../libev/ev.c: In function 'evpipe_write':
+../libev/ev.c:2466:19: warning: assignment to 'char *' from incompatible pointer type 'WSABUF *' [-Wincompatible-pointer-types]
+ 2466 |           buf.buf = &buf;
+      |                   ^
+In file included from nio4r_ext.c:7:
+../libev/ev.c: In function 'ev_run':
+../libev/ev.c:3737:9: warning: implicit declaration of function 'rb_thread_call_without_gvl' [-Wimplicit-function-declaration]
+ 3737 |         rb_thread_call_without_gvl(ev_backend_poll, (void *)&poll_args, RUBY_UBF_IO, 0);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compiling selector.c
+selector.c: In function 'NIO_Selector_allocate':
+selector.c:92:8: warning: implicit declaration of function 'pipe'; did you mean '_pipe'? [-Wimplicit-function-declaration]
+   92 |     if(pipe(fds) < 0) {
+      |        ^~~~
+      |        _pipe
+selector.c: In function 'NIO_Selector_synchronize':
+selector.c:180:26: warning: passing argument 1 of 'rb_ensure' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |         return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
+      |                          ^~~~
+      |                          |
+      |                          VALUE (*)(VALUE *) {aka long long unsigned int (*)(long long unsigned int *)}
+In file included from C:/Ruby30-x64/include/ruby-3.0.0/ruby/ruby.h:38,
+                 from C:/Ruby30-x64/include/ruby-3.0.0/ruby.h:38,
+                 from nio4r.h:9,
+                 from selector.c:6:
+C:/Ruby30-x64/include/ruby-3.0.0/ruby/internal/iterator.h:53:17: note: expected 'VALUE (*)(VALUE)' {aka 'long long unsigned int (*)(long long unsigned int)'} but argument is of type 'VALUE (*)(VALUE *)' {aka 'long long unsigned int (*)(long long unsigned int *)'}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+linking shared-object nio4r_ext.so
+C:/Ruby30-x64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: warning: cannot find entry symbol xport-all; defaulting to 0000000061741000
+
+current directory: C:/Users/workbench/code/temp/ruby-playground/rails_app/vendor/ruby/3.0.0/gems/nio4r-1.2.1/ext/nio4r
+make "DESTDIR=" install
+bash.exe: warning: could not find /tmp, please create!
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20220407-15792-waoq2w
